@@ -7,7 +7,7 @@ Personal collection of my LeetCode problem solutions.
 
 ## 📊 Stats
 
-**Total Solved:** 568 problems
+**Total Solved:** 569 problems
 - Easy: 287
 - Medium: 256
 - Hard: 26

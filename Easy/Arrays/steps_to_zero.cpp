@@ -13,7 +13,7 @@ int numberOfSteps(int num) {
 
 int main() {
     int num;
-    cout << "Enter a number: ";  // Prompt
+    cout << "Enter a number: ";
     cin >> num;
     cout << "Steps: " << numberOfSteps(num) << endl;
 }
