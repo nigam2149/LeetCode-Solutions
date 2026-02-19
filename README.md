@@ -14,13 +14,8 @@ Personal collection of my LeetCode problem solutions.
 
 **Contest Rating:** 1415
 
-**Primary Language:** C++ (565 problems)
+**Primary Language:** C++ (565 problems
 
-## 🎯 About
-
-6th semester student preparing for placements. Solving problems on LeetCode and maintaining this repository to track progress and showcase solutions.
-
-**Target:** SDE role with 4-5 LPA package
 
 ## 🏆 Badges
 
@@ -47,12 +42,4 @@ LeetCode-Solutions/
     ├── Graphs/
     └── ...
 ```
-
-## 🚀 Progress
-
-Started uploading solutions: January 2026
-
-
-**LeetCode Profile:** [nigammishrarkgit](https://leetcode.com/u/nigammishrarkgit/)
-
-| New Problem Name | Medium | Arrays, DP | [C++](./Medium/Arrays/file.cpp) |
+**LeetCode Profile:** [nigammishrarkgit](https://leetcode.com/u/nigammishrarkgit/)|
