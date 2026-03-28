@@ -19,7 +19,9 @@ public:
 
             if(arr[mid] == target)      return mid;
             else if(arr[mid] < target)  st    = mid + 1;
-            else { index = mid;         e     = mid - 1; }
+            else { 
+                index = mid;        
+                e = mid-1; }
         }
         return index;
     }
