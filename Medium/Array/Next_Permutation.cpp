@@ -1,4 +1,4 @@
-// Problem: Next Permutation
+// Problem:Next Permutation
 // Link: https://leetcode.com/problems/next-permutation/
 // Difficulty: Medium
 // Time Complexity: O(n)
