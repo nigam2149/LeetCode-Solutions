@@ -1,8 +1,9 @@
 // Problem: Bottom View of Binary Tree
-// Platform: GFG
+// Link: https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
 // Difficulty: Medium
-// Time Complexity: O(n log n)
-// Space Complexity: O(n)
+// Time Complexity: O(n*logn)
+// Space Complexity: O(n) - map and queue
+// Approach: BFS with horizontal distance, overwrite node at each HD (last wins)
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,37 +12,37 @@ struct Node {
     int data;
     Node* left;
     Node* right;
+    Node(int x) {
+        data = x;
+        left = right = NULL;
+    }
 };
+
 class Solution {
   public:
-    vector<int> bottomView(Node *root) {
-        // Your Code Here
-        vector<int>ans;
-        if(root==NULL)
-            return ans;
+    vector<int> bottomView(Node* root) {
+        vector<int> ans;
+        map<int, int> topNode;
+        queue<pair<Node*, int>> q;
 
-        map<int,int>topNode;
-        queue<pair<Node*,int>>q;
+        q.push({root, 0});
 
-        q.push(make_pair(root,0));
-
-        while(!q.empty()){
-            pair<Node*,int>temp=q.front();
+        while(!q.empty()) {
+            pair<Node*, int> p = q.front();
             q.pop();
-            Node*frontNode=temp.first;
-            int hd=temp.second;
-            
-            topNode[hd]=frontNode->data;
+            Node* temp = p.first;
+            int hd     = p.second;
 
-            if(frontNode->left)
-                q.push(make_pair(frontNode->left,hd-1));
-            if(frontNode->right)
-                q.push(make_pair(frontNode->right,hd+1));
+            // Overwrite - last node at each HD wins
+            topNode[hd] = temp->data;
+
+            if(temp->left)  q.push({temp->left,  hd - 1});
+            if(temp->right) q.push({temp->right, hd + 1});
         }
 
-        for(auto i:topNode)
-            ans.push_back(i.second);
-
-        return ans;        
+        for(auto it : topNode) {
+            ans.push_back(it.second);
+        }
+        return ans;
     }
 };
